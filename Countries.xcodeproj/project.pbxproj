@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47C1824F28F94D3300EE273A /* CountriesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C1824E28F94D3300EE273A /* CountriesApi.swift */; };
+		47C1825128F94E1300EE273A /* CountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C1825028F94E1300EE273A /* CountryService.swift */; };
+		47C1825328F9AECF00EE273A /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C1825228F9AECF00EE273A /* CountriesViewModel.swift */; };
+		47C1825728F9B20400EE273A /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C1825628F9B20400EE273A /* CountryListView.swift */; };
 		47CB4DE828F8240B00C1ECAF /* CountriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CB4DE728F8240B00C1ECAF /* CountriesApp.swift */; };
 		47CB4DEA28F8240B00C1ECAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CB4DE928F8240B00C1ECAF /* ContentView.swift */; };
 		47CB4DEC28F8240C00C1ECAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47CB4DEB28F8240C00C1ECAF /* Assets.xcassets */; };
@@ -14,6 +18,7 @@
 		47CB4DF928F8240D00C1ECAF /* CountriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CB4DF828F8240D00C1ECAF /* CountriesTests.swift */; };
 		47CB4E0328F8240D00C1ECAF /* CountriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CB4E0228F8240D00C1ECAF /* CountriesUITests.swift */; };
 		47CB4E0528F8240D00C1ECAF /* CountriesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CB4E0428F8240D00C1ECAF /* CountriesUITestsLaunchTests.swift */; };
+		47CB4E1A28F8330400C1ECAF /* CountryResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CB4E1928F8330400C1ECAF /* CountryResponseDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		47C1824E28F94D3300EE273A /* CountriesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesApi.swift; sourceTree = "<group>"; };
+		47C1825028F94E1300EE273A /* CountryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryService.swift; sourceTree = "<group>"; };
+		47C1825228F9AECF00EE273A /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
+		47C1825628F9B20400EE273A /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
 		47CB4DE428F8240B00C1ECAF /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CB4DE728F8240B00C1ECAF /* CountriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesApp.swift; sourceTree = "<group>"; };
 		47CB4DE928F8240B00C1ECAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +53,7 @@
 		47CB4DFE28F8240D00C1ECAF /* CountriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountriesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CB4E0228F8240D00C1ECAF /* CountriesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesUITests.swift; sourceTree = "<group>"; };
 		47CB4E0428F8240D00C1ECAF /* CountriesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		47CB4E1928F8330400C1ECAF /* CountryResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryResponseDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +104,10 @@
 		47CB4DE628F8240B00C1ECAF /* Countries */ = {
 			isa = PBXGroup;
 			children = (
+				47CB4E1528F829C000C1ECAF /* Model */,
+				47CB4E1628F829C700C1ECAF /* View */,
+				47CB4E1728F829E400C1ECAF /* ViewModel */,
+				47CB4E1228F8245E00C1ECAF /* Service */,
 				47CB4DE728F8240B00C1ECAF /* CountriesApp.swift */,
 				47CB4DE928F8240B00C1ECAF /* ContentView.swift */,
 				47CB4DEB28F8240C00C1ECAF /* Assets.xcassets */,
@@ -125,6 +139,39 @@
 				47CB4E0428F8240D00C1ECAF /* CountriesUITestsLaunchTests.swift */,
 			);
 			path = CountriesUITests;
+			sourceTree = "<group>";
+		};
+		47CB4E1228F8245E00C1ECAF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				47C1824E28F94D3300EE273A /* CountriesApi.swift */,
+				47C1825028F94E1300EE273A /* CountryService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		47CB4E1528F829C000C1ECAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47CB4E1928F8330400C1ECAF /* CountryResponseDTO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		47CB4E1628F829C700C1ECAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				47C1825628F9B20400EE273A /* CountryListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		47CB4E1728F829E400C1ECAF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				47C1825228F9AECF00EE273A /* CountriesViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +304,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47CB4E1A28F8330400C1ECAF /* CountryResponseDTO.swift in Sources */,
+				47C1824F28F94D3300EE273A /* CountriesApi.swift in Sources */,
+				47C1825728F9B20400EE273A /* CountryListView.swift in Sources */,
 				47CB4DEA28F8240B00C1ECAF /* ContentView.swift in Sources */,
+				47C1825128F94E1300EE273A /* CountryService.swift in Sources */,
 				47CB4DE828F8240B00C1ECAF /* CountriesApp.swift in Sources */,
+				47C1825328F9AECF00EE273A /* CountriesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
