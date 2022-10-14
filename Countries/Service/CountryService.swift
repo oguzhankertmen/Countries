@@ -32,17 +32,15 @@ public final class CountryService: CountriesApi {
         onComplete(.success(countries))
       }
       catch {
-        print(error)
+        onComplete(.failure(.dataNotProcessed))
       }
     }
-    
     dataTask.resume()
   }
 }
 
 
 public enum ApiError: Error {
-  case wrongUrl
   case dataNotArrived
   case dataNotProcessed
 }
