@@ -7,8 +7,10 @@
 
 import Foundation
 
+
 class CountriesViewModel: ObservableObject {
-  @Published var countries: [CountryResponseDTO.Country] = []
+  @Published var countries: [CountryResponse.Country] = []
+  @Published var savedCountries: [CountryResponse.Country] = []
   
   let countryService: CountriesApi
   
@@ -16,15 +18,21 @@ class CountriesViewModel: ObservableObject {
     self.countryService = countryApi
   }
   
+  public var currentOffSet = 0 {
+    didSet {
+      self.getCountries()
+    }
+  }
+  
   func getCountries(){
-    self.countryService.getCountries() { result in
+    self.countryService.getCountries(offSet: self.currentOffSet) { result in
       switch result {
       case let .success(response):
         DispatchQueue.main.async {
-          self.countries = response.data
+          self.countries.append(contentsOf: response.data)
         }
       case let .failure(error):
-        print(error.localizedDescription)
+        print(error)
       }
     }
   }
