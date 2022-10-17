@@ -7,9 +7,9 @@
 
 import Foundation
 
-public struct CountryResponseDTO: Codable, Hashable {
+public struct CountryResponse: Codable, Hashable {
   public let data: [Country]
-
+  
   public struct Country: Codable, Hashable {
     public let code: String
     public let currencyCodes: [String]
@@ -17,3 +17,4 @@ public struct CountryResponseDTO: Codable, Hashable {
     public let wikiDataId: String
   }
 }
+
