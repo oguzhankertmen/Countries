@@ -5,8 +5,8 @@ iOS App that showing Countries and details using the GeoDB Cities API from Rapid
 
 ## Getting Started
 
-- Country List
-Countries is a app that lists countries and detail of countries.
+
+Countries is a app that lists countries and details of countries.
 
 You can save countries and accees them any time you want by saving country. 
 
