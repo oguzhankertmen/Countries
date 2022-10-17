@@ -6,12 +6,26 @@
 //
 
 import SwiftUI
+import SDWebImage
+import SDWebImageSVGCoder
 
 @main
 struct CountriesApp: App {
+  var countries : SavedCountries
+  init() {
+    countries = SavedCountries()
+    setUpDependencies()
+  }
     var body: some Scene {
         WindowGroup {
-            CountryListView()
+          SplashScreenView()
+            .environmentObject(self.countries)
         }
     }
+}
+
+private extension CountriesApp {
+  func setUpDependencies() {
+          SDImageCodersManager.shared.addCoder(SDImageSVGCoder.shared)
+  }
 }
