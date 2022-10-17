@@ -8,5 +8,6 @@
 import Foundation
 
 public protocol CountriesApi {
-  func getCountries( onComplete: @escaping ((Result<CountryResponseDTO, ApiError>) -> Void))
+  func getCountries(offSet: Int, onComplete: @escaping ((Result<CountryResponse, ApiError>) -> Void))
+  func getCountryDetails( code: String, onComplete: @escaping ((Result<CountryDetailResponse, ApiError>) -> Void))
 }
